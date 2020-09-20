@@ -19,8 +19,16 @@ function testCall() {
     var authUrl="https://api.petfinder.com/v2/oauth2/token";
     var cliSecret="lSZxDywC45exeleR65WjlWjkIIIPl8F4BTB9GexH";
 
+  //                  "Access-Control-Allow-Headers" : "Content-Type",
+ //           "Access-Control-Allow-Origin": "https://www.example.com",
+//            "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+
+    
     var myHeaders = new Headers();
+    myHeaders.append("Access-Control-Allow-Headers", "Content-Type");
     myHeaders.append("Access-Control-Allow-Origin", "*");
+    myHeaders.append("Access-Control-Allow-Methods", "OPTIONS,POST,GET");
+
     myHeaders.append("grant_type", "client_credentials");
     myHeaders.append("client_id", catapiKey);
     myHeaders.append("client_secret", cliSecret);
