@@ -24,7 +24,9 @@ function testCall() {
     myHeaders.append("grant_type", "client_credentials");
     myHeaders.append("client_id", catapiKey);
     myHeaders.append("client_secret", cliSecret);
-    fetch(authUrl, { headers: myHeaders
+    fetch(authUrl, { 
+        type:"post",
+        headers: myHeaders
     }).then(function (response) {
         return response.json();
     }).then(function (json) {
