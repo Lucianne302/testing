@@ -16,6 +16,7 @@ var selectedBreed="Abyssinian"; // for testing only
 function testCall() {
     var zip=19701;
     var url="https://api.petfinder.com/v2/animals";
+    var authUrl="https://api.petfinder.com/v2/oauth2/token";
     var cliSecret="lSZxDywC45exeleR65WjlWjkIIIPl8F4BTB9GexH";
 
     var myHeaders = new Headers();
@@ -23,7 +24,7 @@ function testCall() {
     myHeaders.append("grant_type", "client_credentials");
     myHeaders.append("client_id", catapiKey);
     myHeaders.append("client_secret", cliSecret);
-    fetch(url, { headers: myHeaders
+    fetch(authUrl, { headers: myHeaders
     }).then(function (response) {
         return response.json();
     }).then(function (json) {
