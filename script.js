@@ -32,6 +32,7 @@ function testCall() {
     myHeaders.append("grant_type", "client_credentials");
     myHeaders.append("client_id", catapiKey);
     myHeaders.append("client_secret", cliSecret);
+    console.log(myHeaders);
     fetch(authUrl, { 
         type:"post",
         headers: myHeaders
