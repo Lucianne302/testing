@@ -1,15 +1,3 @@
-//var chkBreedSel=document.getElementById("breed"); // the ID of the breed dropdown
-
-//var selectedBreed="Abyssinian"; // for testing only
-
-
-//in Pawssible Pet Section
-//when a breed is selected, and submit button is clicked, site should prompt a picture of
-
-//var selectBreed = document.querySelector("#breed").value;
-
-
-// *** PRO TIP: Make sure you link your script.js in your index.HTML if you would like code to execute ***
 
 
 function testCall() {
