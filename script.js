@@ -16,10 +16,13 @@ function testCall() {
     var zip=19701;
     var url="https://api.petfinder.com/v2/animals";
     var authUrl="https://api.petfinder.com/v2/oauth2/token";
-    var cliSecret="lSZxDywC45exeleR65WjlWjkIIIPl8F4BTB9GexH";
-    var catapiKey = "9582ba93-02b0-45de-aa25-7a09bacf82dd";
+//    var cliSecret="lSZxDywC45exeleR65WjlWjkIIIPl8F4BTB9GexH";
+//    var catapiKey = "9582ba93-02b0-45de-aa25-7a09bacf82dd";
+	
     var lvApiKey="YGYMc2PTrF9CZFZiypTGXH775siAyi3BPfsWe3NFGDKQei5Fv4";
     var lvSecret="P0Jw9aIBwXcVUA46oDH7T2fRktBChQZnBpkPmU9R"
+    var org='R177'; // for testing
+    var status='adoptable'; // for testing
 
 
   //                  "Access-Control-Allow-Headers" : "Content-Type",
@@ -46,6 +49,25 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 	// Log the API data
 	console.log('token', data);
 
+	// Return a second API call
+	// This one uses the token we received for authentication
+	return fetch('https://api.petfinder.com/v2/animals?organization=' + org + '&status=' + status, {
+		headers: {
+			'Authorization': data.token_type + ' ' + data.access_token,
+			'Content-Type': 'application/x-www-form-urlencoded'
+		}
+	});
+}).then(function (resp) {
+
+	// Return the API response as JSON
+	return resp.json();
+
+}).then(function (data) {
+
+	// Log the pet data
+	console.log('pets', data);
+	
+	
 }).catch(function (err) {
 
 	// Log any errors
