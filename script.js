@@ -29,6 +29,7 @@ function testCall() {
 // This is a POST request, because we need the API to generate a new token for us
 fetch('https://api.petfinder.com/v2/oauth2/token', {
 	method: 'POST',
+	crossDomain:true,
 	body: 'grant_type=client_credentials&client_id=' + catapiKey + '&client_secret=' + cliSecret,
 	headers: {
 		'Content-Type': 'application/x-www-form-urlencoded'
