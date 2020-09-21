@@ -23,7 +23,7 @@ function testCall() {
  //           "Access-Control-Allow-Origin": "https://www.example.com",
 //            "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
 
-
+/*
           $.ajax({
             type: 'POST',
             url: authUrl,
@@ -43,9 +43,9 @@ function testCall() {
             error: function (e) {
                 $('#response').html(e.responseText);
             }
-        });
+        });*/
     
-/*
+
 var myHeaders = new Headers();
     myHeaders.append("Access-Control-Allow-Headers", "Content-Type");
     myHeaders.append("Access-Control-Allow-Origin", "*");
@@ -57,13 +57,15 @@ var myHeaders = new Headers();
     console.log(myHeaders);
     fetch(authUrl, { 
         type:"post",
-        headers: myHeaders
+        headers: myHeaders,
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        crossDomain:true,
     }).then(function (response) {
         return response.json();
     }).then(function (json) {
         console.log(json);
     });
-    */
+    
 
 /*
     $.ajax({
