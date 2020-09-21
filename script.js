@@ -34,7 +34,6 @@ function testCall() {
             data: {
                 client_id: catapiKey,
                 client_secret: cliSecret,
-                code: code,
                 grant_type: "client_credentials",
             },
 
