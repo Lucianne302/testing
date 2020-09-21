@@ -1,6 +1,6 @@
-var chkBreedSel=document.getElementById("breed"); // the ID of the breed dropdown
+//var chkBreedSel=document.getElementById("breed"); // the ID of the breed dropdown
 
-var selectedBreed="Abyssinian"; // for testing only
+//var selectedBreed="Abyssinian"; // for testing only
 
 
 //in Pawssible Pet Section
