@@ -18,6 +18,8 @@ function testCall() {
     var authUrl="https://api.petfinder.com/v2/oauth2/token";
     var cliSecret="lSZxDywC45exeleR65WjlWjkIIIPl8F4BTB9GexH";
     var catapiKey = "9582ba93-02b0-45de-aa25-7a09bacf82dd";
+    var lvApiKey="YGYMc2PTrF9CZFZiypTGXH775siAyi3BPfsWe3NFGDKQei5Fv4";
+    var lvSecret="P0Jw9aIBwXcVUA46oDH7T2fRktBChQZnBpkPmU9R"
 
 
   //                  "Access-Control-Allow-Headers" : "Content-Type",
@@ -30,7 +32,7 @@ function testCall() {
 fetch('https://api.petfinder.com/v2/oauth2/token', {
 	method: 'POST',
 	crossDomain:true,
-	body: 'grant_type=client_credentials&client_id=' + catapiKey + '&client_secret=' + cliSecret,
+	body: 'grant_type=client_credentials&client_id=' + lvApiKey + '&client_secret=' + lvSecret,
 	headers: {
 		'Content-Type': 'application/x-www-form-urlencoded'
 	}
