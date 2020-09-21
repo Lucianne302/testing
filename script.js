@@ -57,7 +57,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 
 	// Log the pet data
 	console.log('pets', data);
-	
+	// put cocde to print to page here for pet results
 	
 }).catch(function (err) {
 
