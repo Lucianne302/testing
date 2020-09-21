@@ -12,6 +12,7 @@ function testCall() {
     var org='R177'; // for testing
     var status='adoptable'; // for testing
     var myState='PA'; // for testing
+    var myBreed = "cat";
 
 
   //                  "Access-Control-Allow-Headers" : "Content-Type",
@@ -41,7 +42,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 	// Return a second API call
 	// This one uses the token we received for authentication
 //	return fetch('https://api.petfinder.com/v2/animals?organization=' + org + '&status=' + status, {
-	return fetch('https://api.petfinder.com/v2/animals?location=' + myState + '&status=' + status, {
+	return fetch('https://api.petfinder.com/v2/animals?location=' + myState + '&status=' + status +'&breed='+myBreed, {
 		headers: {
 			'Authorization': data.token_type + ' ' + data.access_token,
 			'Content-Type': 'application/x-www-form-urlencoded'
