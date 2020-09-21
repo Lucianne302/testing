@@ -56,7 +56,7 @@ var myHeaders = new Headers();
     myHeaders.append("client_secret", cliSecret);
     console.log(myHeaders);
     fetch(authUrl, { 
-        type:"post",
+        type:"get",
         headers: myHeaders,
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         crossDomain:true,
