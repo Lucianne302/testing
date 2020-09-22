@@ -29,12 +29,12 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 	headers: {
 		'Content-Type': 'application/x-www-form-urlencoded'
 	}
-}).then(function (resp) {
+}).then(function (resp) { // requests response for token
 
 	// Return the response as JSON
 	return resp.json();
 
-}).then(function (data) {
+}).then(function (data) { //get JSON from token response
 
 	// Log the API data
 	console.log('token', data);
@@ -43,21 +43,21 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
 	// This one uses the token we received for authentication
 //	return fetch('https://api.petfinder.com/v2/animals?organization=' + org + '&status=' + status, {
 	return fetch('https://api.petfinder.com/v2/animals?location=' + myState + '&status=' + status +'&type='+myType, {
-		headers: {
-			'Authorization': data.token_type + ' ' + data.access_token,
+		headers: { // uses token from first response
+			'Authorization': data.token_type + ' ' + data.access_token, 
 			'Content-Type': 'application/x-www-form-urlencoded'
-		}
+		} //content type is parameter for request
 	});
-}).then(function (resp) {
+}).then(function (resp) { //gets response from animals api
 
 	// Return the API response as JSON
-	return resp.json();
+	return resp.json(); 
 
-}).then(function (data) {
+}).then(function (data) { //gets the response from the JSON from animals API
 
 	// Log the pet data
 	console.log('pets', data);
-	// put cocde to print to page here for pet results
+	// put code to print to page here for pet results
 	
 }).catch(function (err) {
 
