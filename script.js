@@ -2,8 +2,8 @@
 
 function testCall() {
     var zip=19701;
-    var url="https://api.petfinder.com/v2/animals";
-    var authUrl="https://api.petfinder.com/v2/oauth2/token";
+   // var url="https://api.petfinder.com/v2/animals";
+    //var authUrl="https://api.petfinder.com/v2/oauth2/token";
 //    var cliSecret="lSZxDywC45exeleR65WjlWjkIIIPl8F4BTB9GexH";
 //    var catapiKey = "9582ba93-02b0-45de-aa25-7a09bacf82dd";
 	
